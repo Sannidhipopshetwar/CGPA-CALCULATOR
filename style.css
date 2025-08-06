@@ -1,0 +1,431 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #1a73e8;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+#cgpaForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#semesters-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.semester-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(26, 115, 232, 0.06);
+    transition: box-shadow 0.2s;
+    position: relative;
+    /* for absolute cross */
+}
+
+.semester-group:focus-within {
+    box-shadow: 0 4px 16px rgba(26, 115, 232, 0.13);
+}
+
+.semester-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+    flex-shrink: 0;
+}
+
+.semester-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.semester-group input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+/* Buttons */
+#add-semester-btn {
+    background-color: #f4faff;
+    color: #1a73e8;
+    border: 1px dashed #1a73e8;
+    margin-bottom: 0;
+    margin-top: 8px;
+    font-size: 1.08em;
+    border-style: dashed;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#add-semester-btn:hover {
+    background: #e3f0ff;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #1557b0;
+    transform: translateY(-2px);
+}
+
+/* Result Box */
+.results {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#result {
+    margin-top: 28px;
+}
+
+.semester {
+    margin: 10px 0;
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* CGPA Text */
+h2 {
+    text-align: center;
+    color: #1a73e8;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: var(--font-h2);
+}
+
+.cgpa-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.percentage {
+    color: #34a853;
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: 600;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+h3,
+.subtitle {
+    font-size: var(--font-h3);
+}
+
+.error {
+    color: #d93025;
+    text-align: center;
+    padding: 10px;
+    background-color: #fce8e6;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+/* Graph Container */
+.graph-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graph-container {
+    margin-top: 32px;
+}
+
+/* Advice Section */
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #f4f7fa;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* --- Font Size Hierarchy & Responsiveness --- */
+
+h1 {
+    font-size: clamp(1.5em, 4vw, 2.5em);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: clamp(1.3em, 3vw, 2.2em);
+    font-weight: 800;
+    color: #1a73e8;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+.percentage {
+    font-size: clamp(1.1em, 2vw, 1.5em);
+    color: #34a853;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.2px;
+}
+
+h3 {
+    font-size: clamp(1.05em, 1.5vw, 1.25em);
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: clamp(1em, 1.2vw, 1.1em);
+    font-weight: 500;
+}
+
+.advice {
+    font-size: clamp(0.95em, 1vw, 1em);
+}
+
+.semester-group label {
+    font-size: clamp(1em, 1vw, 1.08em);
+}
+
+.semester-group input {
+    font-size: clamp(1em, 1vw, 1.08em);
+}
+
+button,
+input,
+select {
+    font-size: clamp(1em, 1vw, 1.1em);
+}
+
+.results,
+.cgpa-section {
+    font-size: clamp(0.95em, 1vw, 1em);
+}
+
+footer {
+    font-size: clamp(0.9em, 0.95vw, 0.95em);
+}
+
+/* Responsive fine-tuning for small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .percentage {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1.05em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .advice {
+        font-size: 0.95em;
+    }
+
+    .semester-group label,
+    .semester-group input,
+    button,
+    input,
+    select {
+        font-size: 1em;
+    }
+
+    .results,
+    .cgpa-section {
+        font-size: 0.95em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .percentage {
+        font-size: 1em;
+    }
+}
+
+/* --- End Font Size Hierarchy --- */
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .container {
+        padding: 12px;
+    }
+
+    #cgpaForm {
+        gap: 16px;
+    }
+
+    #semesters-container {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .semester-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    #semesters-container {
+        gap: 14px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 7px;
+    }
+
+    h1 {
+        font-size: 1.1em;
+    }
+
+    .graph-container {
+        padding: 4px;
+    }
+}
+
+.remove-btn-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.remove-semester-btn {
+    color: #222;
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 1;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    outline: none;
+    margin-bottom: 2px;
+}
+
+.remove-semester-btn:hover {
+    background: #f3f3f3;
+    color: #000;
+    border-color: #bbb;
+}
