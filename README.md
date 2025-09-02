@@ -1,117 +1,116 @@
-🎓 CGPA Calculator
+# 🎓 CGPA Calculator
 
-A web-based tool to calculate your Cumulative Grade Point Average (CGPA) from semester-wise SGPAs and credits. The app also shows your performance trend on a graph and allows you to set a target CGPA to plan your academic goals.
+A web-based tool to calculate your **Cumulative Grade Point Average (CGPA)** from semester-wise SGPAs and credits. The app also shows your performance trend on a graph and allows you to **set a target CGPA** to plan your academic goals.
 
-✨ Features
+---
 
-➕ Dynamic Semester Addition
+## ✨ Features
 
-Add as many semesters as you want.
+* ➕ **Dynamic Semester Addition**
 
-Remove semesters (after the first two).
+  * Add as many semesters as you want.
+  * Remove semesters (after the first two).
 
-📊 Accurate CGPA Calculation
+* 📊 **Accurate CGPA Calculation**
 
-Weighted average calculation using SGPAs and credit hours.
+  * Weighted average calculation using SGPAs and credit hours.
+  * Percentage conversion using formula:
 
-Percentage conversion using formula:
+    ```
+    Percentage = (CGPA - 0.5) × 10
+    ```
 
-Percentage = (CGPA - 0.5) × 10
+* 📈 **Performance Visualization**
 
+  * Line chart showing SGPA trend across semesters (powered by Chart.js).
 
-📈 Performance Visualization
+* 🎯 **Target CGPA Planner**
 
-Line chart showing SGPA trend across semesters (powered by Chart.js).
+  * Input a target CGPA and select a future semester (up to 8).
+  * App calculates the **required average SGPA** in remaining semesters.
+  * Shows warnings if the target is mathematically impossible.
 
-🎯 Target CGPA Planner
+* ⚡ **User-Friendly**
 
-Input a target CGPA and select a future semester (up to 8).
+  * Responsive UI with validation for SGPA (0–10) and credits (>0).
+  * Default 20 credits per semester (can be adjusted).
 
-App calculates the required average SGPA in remaining semesters.
+---
 
-Shows warnings if the target is mathematically impossible.
+## 🛠️ Tech Stack
 
-⚡ User-Friendly
+* **HTML5** – Structure
+* **CSS3** – Styling
+* **JavaScript (Vanilla)** – Functionality
+* **Chart.js** – Graph plotting
 
-Responsive UI with validation for SGPA (0–10) and credits (>0).
+---
 
-Default 20 credits per semester (can be adjusted).
+## 🚀 Getting Started
 
-🛠️ Tech Stack
+1. **Clone the repository**
 
-HTML5 – Structure
+   ```bash
+   git clone https://github.com/Sannidhipopshetwar/CGPA-CALCULATOR.git
+   cd CGPA-CALCULATOR
+   ```
 
-CSS3 – Styling
+2. **Run locally**
+   Just open `index.html` in your browser.
 
-JavaScript (Vanilla) – Functionality
+   Or, serve with a local server:
 
-Chart.js – Graph plotting
+   ```bash
+   npx http-server .
+   ```
 
-🚀 Getting Started
+   Visit: `http://localhost:8080`
 
-Clone the repository
+---
+## 📂 File Structure
 
-git clone https://github.com/Sannidhipopshetwar/CGPA-CALCULATOR.git
-cd CGPA-CALCULATOR
-
-
-Run locally
-Just open index.html in your browser.
-
-Or, serve with a local server:
-
-npx http-server .
-
-
-Visit: http://localhost:8080
-
-🖼️ Screenshots (Optional)
-
-CGPA & Percentage Result
-
-Semester-wise Graph
-
-Target CGPA Planner
-
-(Add screenshots/gifs here to make README more attractive.)
-
-📂 File Structure
+```
 CGPA-CALCULATOR/
 ├── index.html        # Main UI
 ├── style.css         # Styling
 ├── script.js         # Logic for CGPA, graph, and planner
 └── assets/           # (Optional) icons, images, etc.
+```
 
-📐 Formulae
+---
 
-CGPA
+## 📐 Formulae
 
-CGPA = Σ(SGPA × Credits) / Σ(Credits)
+* **CGPA**
 
+  ```
+  CGPA = Σ(SGPA × Credits) / Σ(Credits)
+  ```
+* **Percentage Conversion**
 
-Percentage Conversion
+  ```
+  Percentage = (CGPA - 0.5) × 10
+  ```
+* **Target CGPA Requirement**
 
-Percentage = (CGPA - 0.5) × 10
+  ```
+  Required SGPA = (TargetCGPA × TotalCredits - CompletedWeightedSum) / FutureCredits
+  ```
 
+---
 
-Target CGPA Requirement
-
-Required SGPA = (TargetCGPA × TotalCredits - CompletedWeightedSum) / FutureCredits
-
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome!
 
-Fork this repo
+1. Fork this repo
+2. Create a feature branch (`git checkout -b feature-new`)
+3. Commit your changes (`git commit -m "Added new feature"`)
+4. Push (`git push origin feature-new`)
+5. Open a Pull Request
 
-Create a feature branch (git checkout -b feature-new)
+---
 
-Commit your changes (git commit -m "Added new feature")
-
-Push (git push origin feature-new)
-
-Open a Pull Request
-
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
