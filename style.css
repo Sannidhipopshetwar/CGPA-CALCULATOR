@@ -429,3 +429,59 @@ footer {
     color: #000;
     border-color: #bbb;
 }
+
+.remove-semester-btn:focus {
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+/* Adjusting layout for the remove button */
+.semester-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px 16px;
+    align-items: center;
+}
+
+.semester-group label[for^="sgpa-"] {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.semester-group input[id^="sgpa-"] {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.semester-group label[for^="credits-"] {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.semester-group input[id^="credits-"] {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.remove-btn-row {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .semester-group {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .remove-btn-row {
+        margin-top: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}

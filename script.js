@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (totalCredits > 0) {
                     const cgpa = (weightedSgpaSum / totalCredits).toFixed(2);
                     const percentage = ((parseFloat(cgpa) - 0.5) * 10).toFixed(2);
+                    resultDiv.classList.remove('hidden');
+                    document.querySelector('.graph-container').classList.remove('hidden');
                     displayResult(cgpa, percentage, semesterData);
                     updateGraph(semesterData);
                     setupTargetCgpa(cgpa, semesterData);
